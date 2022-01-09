@@ -17,14 +17,30 @@ html, body {
 }
 
 .intro{
-    flex: 100%;
+   /* flex: 100%; */
     margin: 20%;
     font-weight: 700;
     font-style: italic;
     font-size: 2.2rem;
     line-height: 1.1;
+    
     text-shadow: 2px 2px 4px #000000;
 }
+
 .hello{
   /*  flex: 100%;*/
+  transition: all 1.2s ease-out 0.2s;
 }
+
+.hello:hover{
+    text-shadow: 2px 2px 4px #3d78c5;
+    font-size: 2.5rem;
+}
+
+.full-stack{
+    transition: all 1.2s ease-out 0.2s;
+}
+.full-stack:hover{
+    text-shadow: 2px 2px 4px #3d78c5;
+}
+  
