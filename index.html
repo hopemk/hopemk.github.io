@@ -14,18 +14,219 @@ and open the template in the editor.
 </head>
 
 <body>
-    <nav></nav>
-    <header class="header">
-        <div class="intro">
-            <div class="hello">
-                <h1>Hello there, I'm Hope</h1>
-            </div>
-            <div class="full-stack">
-                <h2>Im a Full Stack web developer.</h2>
-            </div>
+    <nav class=sidebar>
+        <!--
+        <ul>
+            <li class="brand">Hope</li>
+        </ul>-->
+        <div class="brand"><a href="#header">Hope</a></div>
+        <div class="nav-links">
+            <div class="links"><a href="#about">About</a></div>
+            <div class="links"><a href="#portfolio">Portfolio</a></div>
+            <div class="links"><a href="#about">Skills</a></div>
+            <div class="links"><a href="#get-in-touch">Contact</a></div>
         </div>
-    </header>
-    <section></section>
+        <div class="social-media">
+            Linkedin
+        </div>
+    </nav>
+    <div class="body">
+        <header class="header" id="header">
+            <div class="intro">
+                <div class="my-profile">
+                    <img src="profile.jpg" class="profile-pic" />
+                </div>
+                <div class="intros">
+                    <div class="hello">
+                        <h4>Hie, I'm <span class="span">Hope.</span></h4>
+
+                    </div>
+                    <div class="full-stack">
+                        <h3>A full stack web developer.</h3>
+                        <hr>
+                    </div>
+                    <div class="intro-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            numquam </p>
+
+                    </div>
+                    <div class="button-div">
+                        <a class="button" style="color: white;" stylehref="#" role="button">
+                            <span>view more</span>
+                            <!--
+                        <div class="icon">
+                            <i class="fa fa-arrow-down"></i>
+                        </div>
+                        -->
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--
+        <button class="open-nav">View More</button>
+        <button class="scroll">View More</button>
+        <button class="scroll-right">View More</button>-->
+        </header>
+        <section id="get-in-touch" class="get-in-touch">
+            <div class="contact">
+                <div class="title">
+                    <h4>contact me<span class="span">.</span></h4>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam </p>
+                </div>
+                <div class="form">
+                    <form>
+                        <div>
+                            <input type="text" class="" id="">
+                        </div>
+                        <div>
+                            <input type="text" class="" id="">
+                        </div>
+                        <div>
+                            <input type="text" class="" id="">
+                        </div>
+                        <div>
+                            <input type="text" class="" id="">
+                        </div>
+                        <div class="textarea">
+                            <textarea rows="4" type="text" class="" id=""></textarea>
+                        </div>
+                        <div class="send-message">
+                            <a class="about-button" style="color: white;" stylehref="#" role="button">
+                                <span>view more</span>
+                                <!--
+                        <div class="icon">
+                            <i class="fa fa-arrow-down"></i>
+                        </div>
+                        -->
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="map">
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="abouts">
+                <div class="title">
+                    <h4>About me<span class="span">.</span></h4>
+                </div>
+                <div class="about_contect">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum!</p>
+                    <p>Provident similique accusantium nemo autem. Veritatis
+                        obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                        nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                        tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                        quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+                        sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                        recusandae alias error harum maxime adipisci amet laborum.</p>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="my-skills">
+                    <div class="skill">
+                        <scan>Cloud Computing</scan>
+                       <!-- <div class="skill-progress"></div>-->
+                    </div>
+                    <div class="skill">Backend Development</div>
+                    <div class="skill">Frontend Development</div>
+                    <div class="skill">Version Control</div>
+                    <div class="skill">Automation</div>
+                </div>
+                <div class="skill-content" id="cloud-content">
+                    <div class="title">
+                        <h5>Cloud Computing</h5>
+                    </div>
+                    <div class="description">
+                        
+                    <p class="description-content"><span>></span>Provident similique accusantium nemo autem. Veritatis
+                        obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                        nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                        tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                        quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+                        sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                        recusandae alias error harum maxime adipisci amet laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="portfolio">
+            <div class="projects">
+                <div class="project">
+                    <div class="project-img">
+                        <img class="project-image" src="header.jpeg">
+                    </div>
+                    <div class="project-content">
+                        <div class="title">
+                            <h4>Lorem ipsum dolor</h4>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum!
+                        </div>
+
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <img class="project-image" src="header.jpeg">
+                    </div>
+                    <div class="project-content">
+                        <div class="title">
+                            <h4>Lorem ipsum dolor</h4>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum!
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <img class="project-image" src="header.jpeg">
+                    </div>
+                    <div class="project-content">
+                        <div class="title">
+                            <h4>Lorem ipsum dolor</h4>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function myMap() {
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        </script>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoiJfeRf36qFgZ3r5grI2wmfuKRNOmUSk&callback=myMap"></script>
+        
 </body>
 
 </html>
