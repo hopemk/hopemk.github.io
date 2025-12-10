@@ -9,112 +9,70 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(to right, #1a1a1a, #333333);
+            background-size: auto, 100% 100%;
+            animation: slide 20s linear infinite;
+            transform: skewX(-20deg);
+            z-index: -1;
+        }
+
+        @keyframes slide {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 4rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            text-align: center;
+        }
+
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold text-gray-900">Hope Kugotsi</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <h1 class="text-5xl font-bold mb-4">Hope Kugotsi</h1>
+        <h2 class="text-3xl font-semibold text-indigo-400 mb-6">Backend Developer</h2>
+        <p class="text-lg leading-relaxed mb-8">
+            A passionate backend developer with a love for building robust and scalable web applications. I thrive on solving complex problems and enjoy collaborating with teams to create innovative solutions.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="p-4 rounded-lg text-center">
+                <h3 class="text-xl font-bold mb-2">Node.js</h3>
+            </div>
+            <div class="p-4 rounded-lg text-center">
+                <h3 class="text-xl font-bold mb-2">Python</h3>
+            </div>
+            <div class="p-4 rounded-lg text-center">
+                <h3 class="text-xl font-bold mb-2">Databases</h3>
+            </div>
+            <div class="p-4 rounded-lg text-center">
+                <h3 class="text-xl font-bold mb-2">APIs</h3>
             </div>
         </div>
-    </nav>
-
-    <header class="bg-indigo-600 text-white text-center py-24">
-        <div class="container mx-auto px-6">
-            <h1 class="text-5xl font-bold">Backend Developer</h1>
-            <p class="mt-4 text-xl">I craft elegant and efficient backend solutions.</p>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-6 py-16">
-        <section id="about" class="mb-20">
-            <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
-            <p class="text-lg text-center max-w-3xl mx-auto leading-relaxed">
-                I am a passionate backend developer with a love for building robust and scalable web applications. With a strong foundation in computer science, I am proficient in multiple programming languages and technologies. I thrive on solving complex problems and enjoy collaborating with teams to create innovative solutions.
-            </p>
-        </section>
-
-        <section id="skills" class="mb-20">
-            <h2 class="text-4xl font-bold text-center mb-10">Core Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">Node.js</h3>
-                    <p class="text-gray-600">Building high-performance, scalable server-side applications.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">Python</h3>
-                    <p class="text-gray-600">Utilizing Django and Flask for rapid web development.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">Databases</h3>
-                    <p class="text-gray-600">Proficient with SQL (PostgreSQL, MySQL) and NoSQL (MongoDB) databases.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">APIs</h3>
-                    <p class="text-gray-600">Designing and developing clean and efficient RESTful APIs.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="mb-20">
-            <h2 class="text-4xl font-bold text-center mb-10">My Work</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/600x400/6366f1/ffffff?text=Project+One" alt="Project 1" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">E-commerce Platform</h3>
-                        <p class="text-gray-600">Developed the backend for a fully-featured e-commerce platform with a custom inventory management system.</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/600x400/6366f1/ffffff?text=Project+Two" alt="Project 2" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Social Media API</h3>
-                        <p class="text-gray-600">Designed and built a RESTful API for a social media application, handling user authentication, posts, and real-time updates.</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/600x400/6366f1/ffffff?text=Project+Three" alt="Project 3" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Data Processing Pipeline</h3>
-                        <p class="text-gray-600">Created a data processing pipeline to handle large volumes of data, using Python and a message queue system.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="text-4xl font-bold text-center mb-10">Get In Touch</h2>
-            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
-                <form>
-                    <div class="mb-6">
-                        <label for="name" class="block text-gray-600 mb-2 font-semibold">Name</label>
-                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-gray-600 mb-2 font-semibold">Email</label>
-                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-600 mb-2 font-semibold">Message</label>
-                        <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-indigo-600 text-white p-4 rounded-lg font-bold hover:bg-indigo-700 transition duration-300">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-900 text-white text-center py-6 mt-20">
-        <p>&copy; 2025 Hope Kugotsi. All rights reserved.</p>
-    </footer>
-
+    </div>
 </body>
 </html>
