@@ -69,6 +69,53 @@
             transform: translateY(-3px);
             filter: drop-shadow(0 0 8px rgba(165, 180, 252, 0.5));
         }
+
+        /* Milky Way Animation */
+        @keyframes galaxy-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes galaxy-breathe {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.15); opacity: 0.9; }
+        }
+
+        @keyframes galaxy-colors {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .milky-way-badge {
+            position: relative;
+        }
+
+        .milky-way-badge::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 0deg, #6366f1 90deg, #a855f7 180deg, #ec4899 270deg, transparent 360deg);
+            animation: galaxy-spin 3s linear infinite;
+            z-index: -1;
+            mask: radial-gradient(transparent 62%, black 64%);
+            -webkit-mask: radial-gradient(transparent 62%, black 64%);
+        }
+
+        .milky-way-badge::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: conic-gradient(from 180deg, transparent 0deg, #4f46e5 90deg, #9333ea 180deg, #db2777 270deg, transparent 360deg);
+            filter: blur(12px);
+            z-index: -2;
+            animation: galaxy-spin 4s linear infinite reverse, galaxy-breathe 3s ease-in-out infinite;
+        }
+        
+        .galaxy-text-gradient {
+            animation: galaxy-colors 8s linear infinite;
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
@@ -84,9 +131,9 @@
 
         <div class="p-8 sm:p-14 text-center">
             <!-- Profile Icon -->
-            <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 p-1 border border-indigo-500/30 shadow-[0_0_30px_rgba(99,102,241,0.2)]">
-                 <div class="w-full h-full rounded-full bg-slate-900/80 backdrop-blur-sm flex items-center justify-center">
-                    <span class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 to-purple-400">HK</span>
+            <div class="w-32 h-32 mx-auto mb-8 rounded-full relative milky-way-badge flex items-center justify-center">
+                 <div class="w-full h-full rounded-full bg-slate-900/90 backdrop-blur-sm flex items-center justify-center z-10">
+                    <span class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 to-purple-400 galaxy-text-gradient">HK</span>
                  </div>
             </div>
 
